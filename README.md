@@ -1,1 +1,1 @@
-"# nwlheat-impulse" 
+# nwlheat-impulse
