@@ -1,12 +1,12 @@
 import {Request, Response} from 'express'
-import { AuthenticateUseService } from '../services/AuthenticateUserService'
+import { AuthenticateUserService } from '../services/AuthenticateUserService'
 
 class AuthenticateUserController {
     async handle(request: Request, response: Response) {
 
 			const {code} = request.body;
 
-      const service = new AuthenticateUseService()
+      const service = new AuthenticateUserService()
 
       try {
         const result = await service.execute(code)

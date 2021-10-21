@@ -14,7 +14,7 @@ interface IUserResponse {
   name: string
 }
 
-class AuthenticateUseService {
+class AuthenticateUserService {
   async execute(code: string){
     const url = "https://github.com/login/oauth/access_token"
     const {data : acessTokenResponse } = await axios.post<IAcessTokenResponse>(url, null, {
@@ -52,7 +52,7 @@ class AuthenticateUseService {
        }
      })
     }
-
+    
     const token = sign(
     {
       user: {
@@ -71,4 +71,4 @@ class AuthenticateUseService {
   }
 }
 
-export {AuthenticateUseService}
+export {AuthenticateUserService}
